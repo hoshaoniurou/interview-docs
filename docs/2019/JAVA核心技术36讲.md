@@ -14,8 +14,8 @@
 > 尽量不要捕获类似Exception这样的通用异常,而是应该捕获特定异常
 > 不要生吞(swallow)异常。这是异常处理中要特别注意的事情,因为很可能会导致非常难以诊断的诡异情况。
 
-#### 谈fnal、fnally、 fnalize有什么不同?
-* `fnal`可以用来修饰类、方法、变量,分别有不同的意义,`fnal`修饰的`class`代表不可以继承扩展,fnal的变量是不可以修改的,而fnal的方法也是不可以重写的(override)。
+#### final、fnally、 fnalize有什么不同?
+* `final`可以用来修饰类、方法、变量,分别有不同的意义,`final`修饰的`class`代表不可以继承扩展,final的变量是不可以修改的,而final的方法也是不可以重写的(override)。
 * `fnally`则是Java保证重点代码一定要被执行的一种机制。我们可以使用try-fnally或者try-catch-fnally来进行类似关闭JDBC连接、保证unlock锁等动作。
 * `fnalize`是基础类java.lang.Object的一个方法,它的设计目的是保证对象在被垃圾收集前完成特定资源的回收。fnalize机制现在已经不推荐使用,并且在JDK 9开始被标记 为deprecated。
 
